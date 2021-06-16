@@ -121,3 +121,4 @@ function exmpfun(a:number,b:number):void{
 }
 var jj;
 jj = exmpfun(10,10);
+console.log(jj)
