@@ -114,3 +114,10 @@ class class_interface implements interface_two {
 
 let obj1 = new class_interface();
 console.log(obj1.name, obj1.age, obj1.salary, obj1.empid);
+
+
+function exmpfun(a:number,b:number):void{
+  console.log(a+b);
+}
+var jj;
+jj = exmpfun(10,10);
