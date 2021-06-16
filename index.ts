@@ -115,10 +115,33 @@ class class_interface implements interface_two {
 let obj1 = new class_interface();
 console.log(obj1.name, obj1.age, obj1.salary, obj1.empid);
 
-
-function exmpfun(a:number,b:number):void{
-  console.log(a+b);
+function exmpfun(a: number, b: number): void {
+  console.log(a + b);
 }
 var jj;
-jj = exmpfun(10,10);
-console.log(jj)
+jj = exmpfun(10, 10);
+console.log(jj);
+
+class human {
+  public name: string;
+  public age: number;
+  public color: string;
+
+  constructor(name, age, color) {
+    this.name = name;
+    this.color = color;
+    this.age = age;
+  }
+  walk() {
+    if (this.age > 90) {
+      console.log(`I'm dead`);
+    } else {
+      console.log(`I'm alive`);
+    }
+  }
+}
+let Me = new human('Manoj', 24, 'white');
++Me.walk();
+
+let You = new human('Test', 121, 'black');
+You.walk();
