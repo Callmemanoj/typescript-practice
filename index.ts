@@ -124,13 +124,15 @@ console.log(jj);
 
 class human {
   public name: string;
-  public age: number;
+  private age: number;
   public color: string;
+  private showprivateData;
 
-  constructor(name, age, color) {
+  constructor(name, age, color, privateData) {
     this.name = name;
     this.color = color;
     this.age = age;
+    this.showprivateData = privateData;
   }
   walk() {
     if (this.age > 90) {
@@ -139,9 +141,17 @@ class human {
       console.log(`I'm alive`);
     }
   }
+  getAge(): number {
+    if (this.showprivateData) {
+      return this.age;
+    } else {
+    }
+  }
 }
-let Me = new human('Manoj', 24, 'white');
-+Me.walk();
+let Me = new human('Manoj', 24, 'white', true);
+Me.walk();
+console.log(Me.getAge());
 
-let You = new human('Test', 121, 'black');
+let You = new human('Test', 121, 'black', true);
 You.walk();
+console.log(You.getAge());
